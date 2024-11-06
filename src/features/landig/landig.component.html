@@ -1,0 +1,43 @@
+<div class="pt-12">
+  <header class="px-5">
+    <p class="text-5xl max-w-[650px]">
+      <span class="text-6xl font-semibold">وقت‌بان</span>
+      همراه شما در مدیریت هوشمند زمان
+    </p>
+    <p class="mt-4 text-lg">
+      وقت‌بان، پلتفرمی مدرن برای رزرو و مدیریت نوبت‌ها، تجربه‌ای متفاوت از
+      برنامه‌ریزی را ارائه می‌دهد. با طراحی ساده و امکانات پیشرفته، کاربران
+      می‌توانند به راحتی و با اطمینان نوبت‌های خود را مدیریت کنند.
+    </p>
+  </header>
+  <div class="flex flex-col md:flex-row gap-2 px-5 pt-3">
+    <app-btn>
+      <div class="flex justify-between">
+        <p>ورود کسب و کار</p>
+        <img
+          class="rotate-180 !fill-white"
+          src="/assets/svgs/arrow-black-back.svg"
+        />
+      </div>
+    </app-btn>
+    <app-btn [type]="'outline'">
+      <div class="flex justify-between">
+        <p>ورود مشتری</p>
+        <img
+          class="rotate-180 !fill-white"
+          src="/assets/svgs/arrow-white-back.svg"
+        />
+      </div>
+    </app-btn>
+  </div>
+  <div>
+    <p class="py-20 text-3xl text-center">زمان، هوشمندتر از همیشه</p>
+    <div class="flex flex-nowrap overflow-x-auto">
+      @for (feature of features; track feature.id; let idx = $index) {
+
+      <app-card [landigFeatures]="feature"></app-card>
+
+      }
+    </div>
+  </div>
+</div>
