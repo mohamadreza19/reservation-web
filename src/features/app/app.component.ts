@@ -3,6 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { MasterHeaderComponent } from '../../shared/components';
 import { LandigComponent } from '../landig/landig.component';
 
+import 'swiper/less';
+import 'swiper/less/navigation';
+import 'swiper/less/pagination';
+
 @Component({
   selector: 'app-root',
   standalone: true,

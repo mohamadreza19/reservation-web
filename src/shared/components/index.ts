@@ -1,4 +1,4 @@
-export { MasterHeaderComponent } from './master/master-header.component';
+export { MasterHeaderComponent } from './master/master-header/master-header.component';
 
 // BTN
 

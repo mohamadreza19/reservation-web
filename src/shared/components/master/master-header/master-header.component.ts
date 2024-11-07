@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {} from '@ng-icons/font-awesome';
-import { ContainerComponent } from '../containers/container.component';
+import { ContainerComponent } from '../../containers/container.component';
 
 @Component({
   selector: 'app-master-header',

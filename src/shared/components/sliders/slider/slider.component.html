@@ -1,1 +1,11 @@
-<p>slider works!</p>
+<!-- app.component.html -->
+<div class="swiper-container" #swiperContainer>
+  <div class="swiper-wrapper">
+    @for (feature of features; track feature.id; let idx = $index) {
+    <div class="swiper-slide">
+      <app-card [landigFeatures]="feature"></app-card>
+    </div>
+
+    }
+  </div>
+</div>

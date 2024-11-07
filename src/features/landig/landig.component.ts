@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { BtnComponent, CardComponent } from 'src/shared/components';
+import { Layout1Component } from 'src/shared/components/master/layout.component';
+import { SliderComponent } from 'src/shared/components/sliders/slider/slider.component';
 import { LandigFeatures } from 'src/shared/types/landing-features.interface';
 
 @Component({
   selector: 'app-landig',
   standalone: true,
-  imports: [BtnComponent, CardComponent],
+  imports: [Layout1Component, SliderComponent, BtnComponent, CardComponent],
   templateUrl: './landig.component.html',
   styleUrl: './landig.component.css',
 })
