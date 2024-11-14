@@ -1,18 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { BtnComponent, CardComponent } from 'src/shared/components';
 import { Layout1Component } from 'src/shared/components/master/layout.component';
-import { SliderComponent } from 'src/shared/components/sliders/slider/slider.component';
-import { LandigFeatures } from 'src/shared/types/landing-features.interface';
+// import { SliderComponent } from 'src/shared/components/sliders/slider/slider.component';
+import { PageLinks } from 'src/shared/constants/page-links.enum';
+import { LandingFeatures } from 'src/shared/types/landing-features.interface';
 
 @Component({
-  selector: 'app-landig',
+  selector: 'app-landing',
   standalone: true,
-  imports: [Layout1Component, SliderComponent, BtnComponent, CardComponent],
-  templateUrl: './landig.component.html',
-  styleUrl: './landig.component.css',
+  imports: [
+    Layout1Component,
+    // SliderComponent,
+    BtnComponent,
+    CardComponent,
+    RouterLink,
+  ],
+  templateUrl: './landing.component.html',
+  styleUrl: './landing.component.css',
 })
-export class LandigComponent {
-  features: LandigFeatures[] = [
+export class landingComponent {
+  @Input()
+  pageLinks = PageLinks;
+  features: LandingFeatures[] = [
     {
       id: 1,
       title: 'فرآیند رزرو آسان',

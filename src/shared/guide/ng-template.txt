@@ -1,0 +1,30 @@
+in child
+
+ <ng-container
+      [ngTemplateOutlet]="contentTemplate"
+      [ngTemplateOutletContext]="{
+        message: 'This is dynamic content',
+        action: hayHi
+      }"
+    >
+    </ng-container>
+
+
+    ///
+    class {
+
+ @Input() contentTemplate!: TemplateRef<any>;
+
+    }
+
+
+    in parent
+
+
+
+    <ng-template #cardContent let-message="message" let-action="action">
+  <p>{{ message }}</p>
+  <button (click)="action()">Custom Action</button>
+</ng-template>
+
+

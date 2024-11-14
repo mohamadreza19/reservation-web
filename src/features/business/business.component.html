@@ -1,2 +1,58 @@
-<p>business works!</p>
-<router-outlet />
+<app-layout [isPaddingless]="true">
+  <div
+    class="pb-12 pt-[48px] flex flex-col gap-y-3 border-b border-black magicpattern"
+  >
+    <section class="ms-9 flex items-center gap-x-2">
+      <ng-icon name="faSolidScissors" class="rotate-180"></ng-icon>
+
+      <div class="!font-mada">زیبایی و مراقبت شخصی</div>
+    </section>
+    <section class="ms-9 flex items-center gap-x-4">
+      <div>
+        <p class="text-[34px]">mrzar</p>
+      </div>
+      <div class="flex gap-x-3">
+        <section>
+          <app-solid-badge>رایگان</app-solid-badge>
+        </section>
+        <section class="flex items-center gap-x-1 cursor-pointer">
+          <p class="text-xs text-indigo-400">پلن خود را ارتقاع دهید</p>
+          <ng-icon
+            [color]="'#818cf8'"
+            class="!w-3"
+            name="faSolidArrowLeft"
+          ></ng-icon>
+        </section>
+      </div>
+    </section>
+    <section
+      class="ms-9 mt-1 text-indigo-400 cursor-pointe !font-dancingScript"
+    >
+      https://mrzar.vaghteban.ir
+    </section>
+  </div>
+  <main class="flex">
+    <aside
+      class="min-w-[210px] pt-10 pb-32 ps-12 flex border border-t-0 border-black magicpattern-2"
+    >
+      <section class="w-[2px] h-full bg-black relative right-[2px]"></section>
+      <section class="w-full z-[2]">
+        <app-router-link [to]="pageLinks.BUSINESS_APPOINTMENT"
+          >قرار ملاقات ها</app-router-link
+        >
+        <app-router-link [to]="pageLinks.BUSINESS_EMPLOYEES">
+          کارمند ها</app-router-link
+        >
+        <app-router-link [to]="pageLinks.BUSINESS_SERVICE_PROFILE"
+          >خدمات
+        </app-router-link>
+        <app-router-link [to]="pageLinks.BUSINESS_SETTING">
+          تنظیمات</app-router-link
+        >
+      </section>
+    </aside>
+    <div class="w-full">
+      <router-outlet />
+    </div>
+  </main>
+</app-layout>

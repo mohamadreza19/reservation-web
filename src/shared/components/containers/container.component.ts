@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-container',
   standalone: true,
   imports: [],
-  template: '<div class=""><ng-content></ng-content>< </div>',
+  template: '<div class=""><ng-content></ng-content> </div>',
 })
 export class ContainerComponent {}

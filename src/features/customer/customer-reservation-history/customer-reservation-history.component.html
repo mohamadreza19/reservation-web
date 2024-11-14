@@ -1,0 +1,31 @@
+<div class="w-full flex flex-col bg-indigo-50 p-3 rounded-sm shadow-md">
+  <!-- <div class="flex justify-between gap-2">
+    <app-date-picked *ngIf="startDate" [state]="startDate" />
+    <app-date-picked
+      *ngIf="endDate"
+      [state]="endDate"
+      (onClose)="handleRemoveEndDate()"
+    />
+  </div> -->
+
+  <div
+    class="w-full mt-auto border border-neutral-100 rounded-md flex justify-between"
+  >
+    <div class="w-[300px]">
+      <app-datepicker
+        direction="start"
+        (changeDate)="handleChangeStartDate($event)"
+      />
+    </div>
+    <div class="w-[300px]">
+      <app-datepicker
+        direction="end"
+        (changeDate)="handleChangeEndDate($event)"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="w-full h-32 mt-[100px]">
+  <p class="text-center text-5xl text-neutral-600">خالی !</p>
+</div>

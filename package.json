@@ -20,9 +20,11 @@
     "@angular/router": "^18.2.0",
     "@ng-icons/core": "^29.6.1",
     "@ng-icons/font-awesome": "^29.6.1",
+    "@ng-icons/material-icons": "^29.9.0",
     "@types/swiper": "^5.4.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "typewriter-effect": "^2.21.0",
     "zone.js": "~0.14.10"
   },
   "devDependencies": {

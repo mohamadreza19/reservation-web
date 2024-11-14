@@ -1,0 +1,23 @@
+<div class="w-full h-screen relative pt-12 px-6">
+  <app-master-header2 />
+
+  <div class="w-full h-[108px] mb-12"></div>
+  <app-container2 header="">
+    @if(step!==stepper.TRANSACTION){
+
+    <app-stepper />
+    }
+    <div class="pt-10">
+      @switch (step) { @case (stepper.TRANSACTION) {
+      <app-customer-reservation-history />
+
+      } @case (stepper.PICK_SERVICE) {
+      <app-customer-service />
+      } @case (stepper.PICK_TIME_SLOT) {
+      <app-customer-time-line />
+      } @case (stepper.CONFIRMATION) {
+      <app-customer-confirm />
+      } }
+    </div>
+  </app-container2>
+</div>

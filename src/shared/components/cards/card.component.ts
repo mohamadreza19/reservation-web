@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LandigFeatures } from 'src/shared/types/landing-features.interface';
+import { LandingFeatures } from 'src/shared/types/landing-features.interface';
 
 @Component({
   selector: 'app-card',
@@ -27,7 +27,7 @@ export class CardComponent {
   @Input({
     required: true,
   })
-  landigFeatures: LandigFeatures = {
+  landigFeatures: LandingFeatures = {
     id: 0,
     title: '',
     body: '',

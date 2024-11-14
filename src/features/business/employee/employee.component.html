@@ -1,0 +1,70 @@
+<div class="pt-12 px-6">
+  <app-container2 header=" مدیریت کارمند ها">
+    <app-container3
+      header="کارمند ها"
+      description=" لیست کارمندان شما در این بخش نمایش داده شده است. برای ویرایش نام کارمند،
+    روی دکمه ویرایش کلیک کنید."
+    >
+      <app-table
+        [headerLabels]="['نام', 'رمز عبور']"
+        (onClickEdit)="sayHi('meow')"
+      >
+        <tr *ngFor="let employee of employees">
+          <td class="p-4">
+            <input
+              [ngClass]="{
+                'bg-slate-200': true
+              }"
+              [disabled]="true"
+              class="min-h-10 py-y px-3 border border-black"
+              [placeholder]="employee.name"
+            />
+          </td>
+          <td class="p-4">
+            <input
+              [ngClass]="{
+                'bg-slate-200': true
+              }"
+              type="password"
+              [disabled]="true"
+              class="min-h-10 py-y px-3 border border-black"
+              [placeholder]="'********'"
+            />
+          </td>
+          <td class="p-4 ps-0">
+            <ng-icon name="faSolidEye" />
+          </td>
+        </tr>
+      </app-table>
+    </app-container3>
+
+    <app-container3
+      header="افزودن کارمند"
+      description="
+    در این بخش می‌توانید کارمند جدیدی به لیست کارمندان اضافه کنید. برای اضافه کردن کارمند، اطلاعات مورد نیاز را وارد کرده و روی دکمه افزودن کلیک کنید.
+    "
+    >
+      <form class="flex gap-2 items-center relative">
+        <div class="flex flex-col gap-y-1">
+          <label>نام</label>
+          <input
+            class="min-h-10 py-y px-3 border border-black"
+            placeholder="علی رضایی"
+          />
+        </div>
+
+        <div class="flex flex-col gap-y-1">
+          <label>رمز عبور</label>
+          <input
+            class="min-h-10 py-y px-3 border border-black"
+            placeholder="علی رضایی"
+          />
+        </div>
+
+        <section class="max-w-14 mt-auto">
+          <app-btn size="auto" type="outline">افزودن</app-btn>
+        </section>
+      </form>
+    </app-container3>
+  </app-container2>
+</div>

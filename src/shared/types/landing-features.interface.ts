@@ -1,4 +1,4 @@
-export interface LandigFeatures {
+export interface LandingFeatures {
   id: number;
   title: string;
   body: string;

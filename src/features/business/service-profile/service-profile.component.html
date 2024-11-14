@@ -1,0 +1,35 @@
+<div class="pt-12 px-6">
+  <app-container2 header=" مدیریت خدمات">
+    <app-container3
+      header=" خدمات"
+      description="
+    در این بخش می‌توانید کارمند جدیدی به لیست کارمندان اضافه کنید. برای اضافه کردن کارمند، اطلاعات مورد نیاز را وارد کرده و روی دکمه افزودن کلیک کنید.
+    "
+    >
+      <app-table [headerLabels]="['نام', 'وظیفه']" (onClickEdit)="mewo()">
+        <tr *ngFor="let serviceProfile of serviceProfiles">
+          <td class="p-4">
+            <input
+              [ngClass]="{
+                'bg-slate-200': true
+              }"
+              [disabled]="true"
+              class="min-h-10 py-y px-3 border border-black"
+              [placeholder]="serviceProfile.name"
+            />
+          </td>
+          <td class="p-4">
+            <input
+              [ngClass]="{
+                'bg-slate-200': true
+              }"
+              [disabled]="true"
+              class="min-h-10 py-y px-3 border border-black"
+              [placeholder]="serviceProfile.task"
+            />
+          </td>
+        </tr>
+      </app-table>
+    </app-container3>
+  </app-container2>
+</div>
